@@ -1,0 +1,8 @@
+{
+  "name": "HackJudge AI",
+  "description": "Professional, critical hackathon evaluator that analyzes projects based on clarity, originality, feasibility, and impact.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

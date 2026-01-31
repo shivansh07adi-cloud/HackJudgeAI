@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackJudge AI - Professional Hackathon Evaluator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Outfit:wght@100;300;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #000000;
+            color: #e5e5e5;
+            -webkit-font-smoothing: antialiased;
+        }
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .outfit {
+            font-family: 'Outfit', sans-serif;
+        }
+        .inter {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #222;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #333;
+        }
+
+        /* High-Intensity Attractive Text Glow */
+        .glow-text-white {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glow-text-white:hover {
+            color: #ffffff !important;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 
+                         0 0 30px rgba(255, 255, 255, 0.5),
+                         0 0 45px rgba(168, 85, 247, 0.4); 
+            transform: scale(1.02) translateY(-1px);
+        }
+
+        .glow-text-emerald {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glow-text-emerald:hover {
+            color: #34d399 !important;
+            text-shadow: 0 0 18px rgba(52, 211, 153, 0.9),
+                         0 0 35px rgba(52, 211, 153, 0.5);
+            transform: scale(1.03);
+        }
+
+        .glow-text-purple {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glow-text-purple:hover {
+            color: #a855f7 !important;
+            text-shadow: 0 0 18px rgba(168, 85, 247, 0.9),
+                         0 0 35px rgba(168, 85, 247, 0.5);
+            transform: scale(1.03);
+        }
+
+        /* Shimmer effect for titles */
+        .shimmer-title {
+            background: linear-gradient(90deg, #fff 0%, #a855f7 25%, #fff 50%, #34d399 75%, #fff 100%);
+            background-size: 200% auto;
+            color: white;
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition: all 0.5s;
+        }
+        .shimmer-title:hover {
+            -webkit-text-fill-color: transparent;
+            animation: shine 2.5s linear infinite;
+            text-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+            transform: scale(1.01);
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        /* Smooth reveal for background animation through glass */
+        .glass-box {
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            transition: all 0.5s ease;
+        }
+        .glass-box:hover {
+            backdrop-filter: blur(24px) saturate(210%);
+        }
+
+        /* Custom glow for card content on hover */
+        .card-glow-on-hover:hover {
+            box-shadow: 0 0 80px -10px rgba(168, 85, 247, 0.3);
+            border-color: rgba(168, 85, 247, 0.4) !important;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
